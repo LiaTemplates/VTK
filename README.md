@@ -3,7 +3,7 @@ author:   André Dietrich
 
 email:    andre.dietrich@ovgu.de
 
-version:  0.0.1
+version:  0.0.2
 
 language: en
 
@@ -113,7 +113,7 @@ reader
 
 -->
 
-# VTK
+# VTK - Template
 
                                    --{{0}}--
 This document defines some basic macros for applying
