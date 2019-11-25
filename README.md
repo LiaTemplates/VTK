@@ -9,6 +9,8 @@ language: en
 
 narrator: US English Female
 
+logo:     https://danstoj.pythonanywhere.com/static/adoc/3d_graph.png
+
 comment:  A set of templetes for VTK programming and visualization in LiaScript.
 
 script:   https://unpkg.com/vtk.js
