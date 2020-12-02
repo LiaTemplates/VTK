@@ -3,7 +3,7 @@ author:   André Dietrich
 
 email:    andre.dietrich@ovgu.de
 
-version:  0.0.2
+version:  0.0.3
 
 language: en
 
@@ -36,6 +36,11 @@ eval(`@1`);
 
 @end
 
+
+@VTK.loadIframe
+<iframe style="width: 100%; height:460px;" src="https://kitware.github.io/vtk-js-datasets/apps/VolumeViewer.html?fileURL=@0"></iframe>
+
+@end
 
 @VTK.load: @VTK._load_(@uid,`@0`)
 
@@ -107,6 +112,7 @@ reader
     renderWindow.render();
   });
 
+console.log("loading")
 </script>
 
 <div id="vtk_@0" style="height: 500px"></div>
@@ -223,6 +229,12 @@ renderWindow.render();
 
 @VTK.load(https://data.kitware.com/api/v1/file/58e665158d777f16d095fc2e/download)
 
+## `VTK.loadIframe`
+
+
+@VTK.loadIframe(https://kitware.github.io/vtk-js-datasets/data/vti/head-binary-zlib.vti)
+
+
 ## Implementation
 
 ``` html
@@ -249,6 +261,10 @@ eval(`@1`);
 
 @end
 
+@VTK.loadIframe
+<iframe style="width: 100%; height:460px;" src="https://kitware.github.io/vtk-js-datasets/apps/VolumeViewer.html?fileURL=@0"></iframe>
+
+@end
 
 @VTK.load: @VTK._load_(@uid,`@0`)
 
@@ -319,6 +335,7 @@ reader
     renderer.updateLightsGeometryToFollowCamera();
     renderWindow.render();
   });
+
 </script>
 
 <div id="vtk_@0" style="height: 500px"></div>
